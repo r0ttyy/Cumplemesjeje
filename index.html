@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un Regalito Especial 💕</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Librería de Confeti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- CONTROLES FLOTANTES DE MÚSICA -->
+<div class="audio-controls">
+  <button id="btnPlayPause" class="btn-audio" title="Pausar/Reproducir música">🎵</button>
+  <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.01" value="0.5" title="Volumen">
+</div>
+
+  <!-- PANTALLA 1: Bienvenida -->
+<div id="screen-1" class="container screen">
+  <h1>ola miamol 💕</h1>
+  <img src="gatitoola.gif" alt="Gatito saludando" class="welcome-gif">
+  <p class="welcome-text">Esto es un pequeño regalito que le he estado preparando...</p>
+  <button id="btnStart" class="btn-primary">haz click para continuar bebita 💖</button>
+</div>
+
+  <!-- PANTALLA 2: Pregunta "Me amas?" -->
+  <div id="screen-2" class="container screen hidden">
+    <h1>PRIMERO... 💕</h1>
+    <h2 class="question-text">¿Me ama? 🥺</h2>
+    <img src="gatito.gif" alt="Gatito cute" class="welcome-gif">
+    
+    <div class="buttons-container">
+      <button id="btnYes" class="btn-primary btn-yes">Tí, mutitimo ❤️</button>
+      <button id="btnNo" class="btn-secondary btn-no">No 😜</button>
+    </div>
+  </div>
+
+  <!-- PANTALLA 3: Celebración con Confeti -->
+  <div id="screen-3" class="container screen hidden">
+    <h1 class="celebrate-title">🎉 ¡YO SABÍA QUE SÍ ME AMABA MI AMORR JIJIJI! 🎉</h1>
+    <img src="kittyy.gif" alt="hello kitty bailando" class="welcome-gif">
+    <p class="celebrate-subtext">Sabía que no podia decirme que no 💖</p>
+    <button id="btnContinue3" class="btn-primary btn-continue">Y AQUÍ LE DEMOSTRARÉ TODO LO QUE LA AMO ❤️</button>
+  </div>
+
+  <!-- PANTALLA 4: Carrusel de Amor -->
+  <div id="screen-4" class="container screen hidden">
+    <h2>Para el amor de mi vida 💕</h2>
+
+    <div class="carousel-container">
+      <div class="carousel-track" id="carouselTrack">
+        
+        <!-- DIAPOSITIVA 1: Fotos -->
+        <div class="carousel-slide">
+          <div class="slide-card">
+            <img src="nosotros.jpg" alt="Foto juntos" class="slide-img">
+            <h3>Gracias por tantos momentos lindos juntos</h3>
+            <p>Cada instante a su lado se convierte en mi recuerdo favorito y un tesoro invaluable.💖</p>
+          </div>
+        </div>
+
+        <!-- DIAPOSITIVA 2: Carta -->
+        <div class="carousel-slide">
+          <div class="slide-card">
+            <h3>Gracias por amarme siempre mi amor💕</h3>
+            <img src="amormuejeje.jpg" alt="Foto juntos" class="slide-img2">
+            <p>
+              Gracias por soportarme tanto y amarme tanto mi maldadosita muejeje💖
+            </p>
+          </div>
+        </div>
+
+        <!-- DIAPOSITIVA 3: Razones -->
+        <div class="carousel-slide">
+          <div class="slide-card">
+            <h3>3 Razones por las que te amo ✨</h3>
+            <ul class="reasons-list">
+              <li>❤️ Su sonrisa que me ilumina siempre.</li>
+              <li>❤️ Lo cariñosa y atenta que es conmigo.</li>
+              <li>❤️ La forma tan bonita en la que me hace reír.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- DIAPOSITIVA 4: Cupón -->
+        <div class="carousel-slide">
+          <div class="slide-card">
+            <h3>Vale por... 🎟️</h3>
+            <p>Este cupón especial es válido para:</p>
+            <div class="coupon">
+              Una vida llena de abrazos, besos y momentos inolvidables juntos y muxos besitos y chancheitos yicos💖
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Botones de navegación en forma de corazones -->
+      <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Anterior">❤️</button>
+      <button class="carousel-btn next-btn" id="nextBtn" aria-label="Siguiente">❤️</button>
+    </div>
+
+    <!-- Puntos indicadores -->
+    <div class="carousel-dots" id="carouselDots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+    </div>
+  </div>
+
+  <!-- PANTALLA 5: CARTA FINAL -->
+<div id="screen-5" class="screen hidden">
+  <h2 class="celebrate-title">¡TE AMO CON TODO MI CORAZÓN! 💖</h2>
+  
+  <!-- CARTA BONITA -->
+  <div class="letter-box">
+    <p>
+      Gracias por llenar mis días de sonrisas, por su paciencia y por su amor incondicional. Cumplir un mes más con usted me hace la persona más feliz del mundo y de verdad no puedo estar más agradecido con el destino por darme a la mujer más linda, guapa, hermosa, tierna, dulce, cariñosa, amorosa, comprensiva, detallista y la mujer más perfecta del mundo.
+    </p>
+    <p>
+      Usted sabe que conmigo puede contar toda la vida mi princesa y nunca pero nunca la dejaré solita en nadita, en las buenas y malas estaré con usted toda mi vida. Estos meses han sido muy especiales para mí porque he aprendido mucho a su lado mi bebé y aprendí a que uno sí puede ser amado de una manera muy linda.
+    </p>
+    <p class="highlight-text">
+      Te amo Lilian Vanesa Leal Pérez y siempre te amaré mi vida. 💖 ¡Por este mes y muchos más juntos mi princesa hermosa! ¡Feliz Cumplemes, mi vida! 🥰
+    </p>
+  </div>
+
+  <!-- ELEMENTOS FINALES CENTRADOS -->
+  <div class="final-media">
+    <img src="meowl.gif" alt="Gatito tierno" class="final-gif">
+    <div class="final-heart">💖</div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
